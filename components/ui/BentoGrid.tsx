@@ -63,8 +63,30 @@ export const BentoGridItem = ({
 
   const handleCopy = () => {
     const text = "rafiuddin.tarif@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+
+    // Add browser and clipboard API check
+    if (typeof window !== "undefined" && navigator?.clipboard) {
+      navigator.clipboard
+        .writeText(text)
+        .then(() => {
+          setCopied(true);
+        })
+        .catch((err) => {
+          console.warn("Failed to copy text: ", err);
+          // Fallback for older browsers
+          try {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            setCopied(true);
+          } catch (fallbackErr) {
+            console.warn("Fallback copy failed: ", fallbackErr);
+          }
+        });
+    }
   };
 
   return (

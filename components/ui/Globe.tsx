@@ -234,10 +234,15 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
+    // Add browser check before accessing window
+    if (typeof window !== "undefined") {
+      gl.setPixelRatio(window.devicePixelRatio);
+    } else {
+      gl.setPixelRatio(1); // Default fallback for SSR
+    }
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
-  }, []);
+  }, [gl, size]);
 
   return null;
 }
