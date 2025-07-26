@@ -10,8 +10,6 @@ import Skills from "@/components/skills";
 import AboutMe from "@/components/AboutMe";
 import ProblemSolvingSection from "@/components/Problemsolving";
 import WorkExperience from "@/components/Experience";
-import Approach from "@/components/Approach"; // Add this import
-import ClientOnly from "@/components/ClientOnly"; // Import your ClientOnly wrapper
 
 const Home = () => {
   return (
@@ -25,28 +23,6 @@ const Home = () => {
         <AboutMe />
         <Clients />
         <WorkExperience />
-
-        {/* Wrap the Approach component that uses CanvasRevealEffect */}
-        <ClientOnly
-          fallback={
-            <div className="w-full py-20">
-              <h1 className="heading">
-                My <span className="text-purple">approach</span>
-              </h1>
-              <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="max-w-sm w-full mx-auto p-4 lg:h-[35rem] rounded-3xl bg-gray-900 animate-pulse"
-                  ></div>
-                ))}
-              </div>
-            </div>
-          }
-        >
-          <Approach />
-        </ClientOnly>
-
         <ProblemSolvingSection />
         <Footer />
       </div>
