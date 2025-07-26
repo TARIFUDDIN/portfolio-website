@@ -142,7 +142,7 @@ const ProblemSolvingSection = () => {
         </div>
         <p className="text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
           Passionate about algorithmic challenges and competitive programming.
-          Here's my journey across different coding platforms.
+          Here&apos;s my journey across different coding platforms.
         </p>
       </div>
 

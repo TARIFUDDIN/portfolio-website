@@ -39,8 +39,8 @@ const AboutMe = () => {
 
               <div className="space-y-6 text-gray-300 leading-relaxed max-w-2xl">
                 <p className="text-lg">
-                  I'm a passionate full-stack developer specializing in modern
-                  tech stacks like
+                  I&apos;m a passionate full-stack developer specializing in
+                  modern tech stacks like
                   <span className="text-blue-400 font-medium"> Next.js</span>,
                   <span className="text-red-400 font-medium"> NestJS</span>,
                   <span className="text-green-400 font-medium"> MERN</span>, and
@@ -73,7 +73,8 @@ const AboutMe = () => {
                     {" "}
                     AI-driven products
                   </span>{" "}
-                  that solve real-world problems. Recently, I've been exploring
+                  that solve real-world problems. Recently, I&apos;ve been
+                  exploring
                   <span className="text-indigo-400 font-medium">
                     {" "}
                     multi-agent AI systems
@@ -92,8 +93,8 @@ const AboutMe = () => {
                 </p>
 
                 <p className="text-lg">
-                  When I'm not immersed in code, I'm exploring emerging
-                  technologies and staying curious about the endless
+                  When I&apos;m not immersed in code, I&apos;m exploring
+                  emerging technologies and staying curious about the endless
                   possibilities in tech.
                   <span className="text-purple-400 font-medium">
                     {" "}
